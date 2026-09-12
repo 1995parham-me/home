@@ -12,4 +12,4 @@ nginx clones this repository and serves it as a static root, configured from a p
 
 ## Constraints
 
-Everything is inline: no CDN, no webfont, no external request of any kind. Many visitors cannot reach jsdelivr, unpkg or `fonts.googleapis.com`, and a page that depends on them renders broken.
+Everything is inline or same-origin: the CSS lives in the document and `welcome.jpg` is served from this directory. No CDN, no webfont, no external request of any kind. Many visitors cannot reach jsdelivr, unpkg or `fonts.googleapis.com`, and a page that depends on them renders broken.

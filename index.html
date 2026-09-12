@@ -53,6 +53,19 @@
     margin: 0 auto 20px;
     color: var(--accent);
   }
+  .photo {
+    display: block;
+    width: 100%;
+    height: auto;
+    /* Reserve the box before the bytes arrive, so the footer below does not
+       jump on a slow uplink. */
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+    margin: 28px 0 0;
+    background: var(--bg);
+  }
   h1 {
     font-size: clamp(1.55rem, 5vw, 2.1rem);
     line-height: 1.2;
@@ -87,6 +100,9 @@
 
     <h1>Welcome to our home</h1>
     <p>If you can see this page, our home is safe and sound.</p>
+
+    <img class="photo" src="welcome.jpg" width="1200" height="900"
+         alt="Parham smiling at the camera, with a chimpanzee resting on a ledge behind him.">
 
     <hr class="rule">
     <footer>
