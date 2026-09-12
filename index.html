@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome to our home</title>
+<meta name="description" content="A small welcome page for our home.">
+<style>
+  /* Everything is inline and self-hosted on purpose: this page is served from
+     a house in Iran, where jsdelivr/unpkg/fonts.googleapis.com are unreachable
+     for many visitors. No external request should be needed to render it. */
+  :root {
+    --bg: #faf7f2;
+    --panel: #ffffff;
+    --ink: #241f1a;
+    --muted: #6d635a;
+    --line: #e8e0d5;
+    --accent: #c2703d;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #17140f;
+      --panel: #201b15;
+      --ink: #f2ece3;
+      --muted: #a89c8d;
+      --line: #332b22;
+      --accent: #e0925c;
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+  }
+  main {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 18px;
+    padding: clamp(28px, 6vw, 56px);
+    max-width: 33rem;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 12px 32px rgba(0,0,0,.06);
+  }
+  .mark {
+    width: 56px; height: 56px;
+    margin: 0 auto 20px;
+    color: var(--accent);
+  }
+  h1 {
+    font-size: clamp(1.55rem, 5vw, 2.1rem);
+    line-height: 1.2;
+    margin: 0 0 12px;
+    letter-spacing: -.02em;
+  }
+  p { margin: 0 auto; color: var(--muted); max-width: 28rem; }
+  .rule {
+    height: 1px; border: 0; background: var(--line);
+    margin: 28px 0 20px;
+  }
+  footer { font-size: .85rem; color: var(--muted); }
+  code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: .85em;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: .15em .45em;
+  }
+</style>
+</head>
+<body>
+  <main>
+    <svg class="mark" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+         role="img" aria-label="A house">
+      <path d="M3 10.5 12 3l9 7.5"></path>
+      <path d="M5.25 9.75V20.25h13.5V9.75"></path>
+      <path d="M9.75 20.25v-6h4.5v6"></path>
+    </svg>
+
+    <h1>Welcome to our home</h1>
+    <p>Nothing to see here — just the front door.</p>
+
+    <hr class="rule">
+    <footer>
+      <code>home.1995parham.me</code>
+    </footer>
+  </main>
+</body>
+</html>
